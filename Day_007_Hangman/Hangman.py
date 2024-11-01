@@ -5,7 +5,6 @@ from hangman_art import stages, logo
 print(logo)
 
 chosen_word = random.choice(word_list)
-print(chosen_word)
 
 placeholder = "_" * len(chosen_word)
 print(placeholder)
