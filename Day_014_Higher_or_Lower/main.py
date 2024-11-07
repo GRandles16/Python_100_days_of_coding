@@ -33,7 +33,7 @@ while game_should_continue:
     account_a = account_b
     account_b = random.choice(data)
 
-    if account_a == account_b:
+    while account_a != account_b:
         account_b = random.choice(data)
 
     print(f"Compare A: {format_data(account_a)}.")
