@@ -15,10 +15,7 @@ while len(guessed_counties) < 32:
     answer_county = screen.textinput(title=f"{len(guessed_counties)}/32 Counties Correct", prompt="What's another state's name?").title()
 
     if answer_county == "Exit":
-        missing_counties = []
-        for county in all_counties:
-            if county not in guessed_counties:
-                missing_counties.append(county)
+        missing_counties = [county for county in all_counties if county not in guessed_counties]
         new_data = pd.DataFrame(missing_counties)
         new_data.to_csv("counties_to_learn.csv")
         break
